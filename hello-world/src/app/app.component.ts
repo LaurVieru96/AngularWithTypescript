@@ -5,18 +5,31 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
-  intervalSub:any;
+// export class AppComponent implements OnInit, OnDestroy {
+//   intervalSub:any;
 
-  ngOnInit(): void {
-    this.intervalSub = setInterval(() =>{
-      console.log('Hello from ngOnInit');
-    },1000)
-  }
+//   ngOnInit(): void {
+//     this.intervalSub = setInterval(() =>{
+//       console.log('Hello from ngOnInit');
+//     },1000)
+//   }
 
-  ngOnDestroy(): void {
-    if(this.intervalSub) {
-      clearInterval(this.intervalSub);
+//   ngOnDestroy(): void {
+//     if(this.intervalSub) {
+//       clearInterval(this.intervalSub);
+//     }
+//   }
+// }
+
+export class AppComponent {
+  title = "Hello World!";
+
+
+  getMin(a: number,b: number) {
+    if(a<b) {
+      return a;
     }
+
+    return b;
   }
 }
